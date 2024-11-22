@@ -1,24 +1,24 @@
 [
   {
-    "ContainingType": "WebApi.Controllers.EmployeeController",
+    "ContainingType": "WebApi.Controllers.BiomassaController",
     "Method": "Add",
-    "RelativePath": "api/v1/employee",
+    "RelativePath": "api/v2/biomassa",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "employeeView",
-        "Type": "WebApi.ViewModel.EmployeeViewModel",
+        "Name": "biomassaView",
+        "Type": "WebApi.ViewModel.BiomassaViewModel",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "WebApi.Controllers.EmployeeController",
+    "ContainingType": "WebApi.Controllers.BiomassaController",
     "Method": "Get",
-    "RelativePath": "api/v1/employee",
+    "RelativePath": "api/v2/biomassa",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
