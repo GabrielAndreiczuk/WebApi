@@ -5,7 +5,7 @@ namespace WebApi.Infraestrutura
 {
     public class ConnectionContext : DbContext
     {
-        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Biomassa> Biomassa { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseNpgsql(
                 "Server=localhost;" + 

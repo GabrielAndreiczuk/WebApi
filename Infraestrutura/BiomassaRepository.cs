@@ -2,19 +2,19 @@
 
 namespace WebApi.Infraestrutura
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class BiomassaRepository : IBiomassaRepository
     {
         private readonly ConnectionContext _context = new ConnectionContext();
 
-        public void Add(Employee employee)
+        public void Add(Biomassa valores)
         {
-            _context.Employee.Add(employee);
+            _context.Biomassa.Add(valores);
             _context.SaveChanges();
         }
 
-        public List<Employee> Get()
+        public List<Biomassa> Get()
         {
-            return _context.Employee.ToList();
+            return _context.Biomassa.ToList();
         }
     }
 }
