@@ -18,4 +18,21 @@ namespace WebApi.Model
             this.Biomassa_Esperada = Biomassa_Esperada;
         }
     }
+
+    [Table("Usuario")]
+    public class Usuario
+    {
+        [Key]
+        public int ID_Usuario { get; private set; }
+        public string Nome { get; private set; }
+        public string Email { get; private set; }
+        public string Senha { get; private set; }
+
+        public Usuario(string nome, string email, string senha)
+        {
+            this.Nome = nome;
+            this.Email = email;
+            this.Senha = senha;
+        }
+    }
 }

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Hosting;
 using WebApi.Infraestrutura;
 using WebApi.Model;
 
@@ -11,6 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddTransient<IBiomassaRepository, BiomassaRepository>();
+builder.Services.AddTransient<IUsuarioRepository, UsuarioRepository>();
 
 var app = builder.Build();
 

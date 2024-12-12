@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity.Data;
+using Microsoft.AspNetCore.Mvc;
+using WebApi.Infraestrutura;
 using WebApi.Model;
 using WebApi.ViewModel;
 
@@ -30,6 +32,38 @@ namespace WebApi.Controllers
         {
             var valores = _biomassaRepository.Get();
             return Ok(valores);
+        }
+    }
+
+    [ApiController]
+    [Route("api/v2/Usuario")]
+    public class UsuarioController : ControllerBase
+    {
+        private readonly IUsuarioRepository _usuarioRepository;
+
+        public UsuarioController(IUsuarioRepository usuarioRepository)
+        {
+            _usuarioRepository = usuarioRepository ?? throw new ArgumentNullException(nameof(_usuarioRepository));
+        }
+
+        [HttpGet]
+        public IActionResult Get()
+        {
+            var valores = _usuarioRepository.Get();
+            return Ok(valores);
+        }
+
+        [HttpPost("Login")]
+        public async Task<IActionResult> Login([FromBody] LoginRequest request)
+        {
+            var usuario = await _usuarioRepository.GetUsuario(request.Email, request.Password);
+
+            if (usuario == null)
+            {
+                return Unauthorized("Email ou senha inválidos!");
+            }
+
+            return Ok("Login realizado com sucesso!");
         }
     }
 }
