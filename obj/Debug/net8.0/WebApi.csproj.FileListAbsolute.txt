@@ -45,3 +45,4 @@ C:\Users\Pichau\Documents\Dev\Fish Trader\WebApi\obj\Debug\net8.0\refint\WebApi.
 C:\Users\Pichau\Documents\Dev\Fish Trader\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\Pichau\Documents\Dev\Fish Trader\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\Pichau\Documents\Dev\Fish Trader\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\Pichau\Documents\Dev\Fish Trader\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json

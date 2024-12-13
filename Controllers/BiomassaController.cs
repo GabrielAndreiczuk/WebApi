@@ -53,6 +53,16 @@ namespace WebApi.Controllers
             return Ok(valores);
         }
 
+        [HttpPost("Cadastro")]
+        public IActionResult Add(UsuarioViewModel usuarioView)
+        {
+            var valores = new Usuario(usuarioView.Nome, usuarioView.Email, usuarioView.Senha);
+
+            _usuarioRepository.Add(valores);
+
+            return Ok();
+        }
+
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {

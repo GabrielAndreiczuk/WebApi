@@ -37,6 +37,22 @@
   },
   {
     "ContainingType": "WebApi.Controllers.UsuarioController",
+    "Method": "Add",
+    "RelativePath": "api/v2/Usuario/Cadastro",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioView",
+        "Type": "WebApi.ViewModel.UsuarioViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.UsuarioController",
     "Method": "Login",
     "RelativePath": "api/v2/Usuario/Login",
     "HttpMethod": "POST",
