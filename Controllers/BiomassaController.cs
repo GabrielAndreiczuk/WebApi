@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Infraestrutura;
 using WebApi.Model;
+using WebApi.Services;
 using WebApi.ViewModel;
 
 namespace WebApi.Controllers
@@ -74,6 +75,23 @@ namespace WebApi.Controllers
             }
 
             return Ok("Login realizado com sucesso!");
+        }
+    }
+
+    [ApiController]
+    [Route("api/v2/Auth")]
+    public class AuthController : Controller
+    {
+        [HttpPost]
+        public IActionResult Auth(string email, string senha)
+        {
+            if (email == "gabriel@gmail.com" && senha == "12345")
+            {
+                var token = TokenServices.GenerateToken(email);
+                return Ok(token);
+            }
+
+            return BadRequest("Usuário ou senha incorreta!");
         }
     }
 }

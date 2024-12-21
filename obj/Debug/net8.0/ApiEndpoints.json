@@ -1,5 +1,26 @@
 [
   {
+    "ContainingType": "WebApi.Controllers.AuthController",
+    "Method": "Auth",
+    "RelativePath": "api/v2/Auth",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "senha",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.BiomassaController",
     "Method": "Add",
     "RelativePath": "api/v2/biomassa",
